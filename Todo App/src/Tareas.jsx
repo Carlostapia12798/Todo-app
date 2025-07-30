@@ -1,19 +1,20 @@
 import './Tarea.css';
-import imgEdit from './assets/edit.svg';
-import imgDelete from './assets/delete.svg';
 
-function Tarea() {
+import { FaEdit } from "react-icons/fa";
+import { FaTrashAlt } from "react-icons/fa";
+
+function Tarea({ texto }) {
 
 return (
     <div className='tarea'>
-    <span className='texto'>Tarea 1</span>
+    <p className='texto'>{texto}</p>
 
     <div className='btns'>
         <button className='icon-btn' aria-label="Editar tarea">
-            <img src={imgEdit} alt="Editar" />
+            <FaEdit />
         </button>
         <button className='icon-btn' aria-label="Eliminar tarea">
-            <img src={imgDelete} alt="Eliminar" />
+            <FaTrashAlt />
         </button>
     </div>
     </div>
