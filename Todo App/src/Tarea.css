@@ -12,6 +12,27 @@
   box-sizing: border-box;
 }
 
+.tarea-completada {
+  opacity: 0.5;
+  text-decoration: line-through;
+}
+
+.tarea.completada .texto {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+.contenido {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.check {
+  width: 18px;
+  height: 18px;
+}
+
 .texto {
   font-size: 24px;
   font-weight: 500;
