@@ -3,29 +3,39 @@
     position: relative;
     text-align: center;
     margin-top: 20px;
-    background-color: aqua;
+    background-color: #18191a;
     width: 800px;
     height: 100vh;
     margin: 0 auto;
     border-radius: 16px;
 }
 
-h1 {
-    margin: 20px 0;
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px; /* Espacio entre imagen y título */
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.header img {
+    width: 50px;
+    height: 50px;
+    margin: 0;
+    position: static;
+}
+
+
+.header h1 {
+    margin: 0;
     font-family: 'Courier New', Courier, monospace;
     font-weight: bold;
     font-size: 40px;
-    color: #000;
-    margin-bottom: 50px;
-    padding: 10px 0;
+    color: #eeeeee;
+    padding: 0;
 }
 
-img {
-    width: 100px;
-    height: 50px;
-    position: absolute;
-    top: 5px;
-}
 
 input {
     position: relative;
@@ -50,11 +60,16 @@ input {
     cursor: pointer;
 }
 
+.btnAgregar:hover {
+    background-color: rgb(34, 139, 34);
+    transform: scale(1.1)
+}
+
 .todo-list {
     position: relative;
     width: 600px;
     height: 500px;
-    background-color: #fff;
+    background-color: #e0e7ff;
     border-radius: 16px;
     overflow-y: auto;
     margin: 20px auto;
