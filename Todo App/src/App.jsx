@@ -21,11 +21,24 @@ function App() {
     setInputTexto(''); // limpia el input
   };
 
-   const eliminarTarea = (id) => {
+  const eliminarTarea = (id) => {
       const nuevasTareas = tareas.filter((t) => t.id !== id);
       setTareas(nuevasTareas);
     };
 
+  const editarTarea = (id) => {
+    const tareaAEditar = tareas.find((t) => t.id === id);
+    const nuevoTexto = prompt("Edita la tarea:", tareaAEditar.texto);
+
+    if (nuevoTexto !== null && nuevoTexto.trim() !== '') {
+      const tareasActualizadas = tareas.map((t) =>
+        t.id === id ? { ...t, texto: nuevoTexto } : t
+      );
+      setTareas(tareasActualizadas);
+    }
+  };
+
+  // Renderiza la aplicación
   return (
     <div className="todo-container">
       <div className="header">
@@ -46,7 +59,7 @@ function App() {
 
       <div className="todo-list">
         {tareas.map((t) => (
-          <Tarea key={t.id} id={t.id} texto={t.texto} eliminarTarea={eliminarTarea} />
+          <Tarea key={t.id} id={t.id} texto={t.texto} eliminarTarea={eliminarTarea} editarTarea={editarTarea} />
         ))}
       </div>
     </div>

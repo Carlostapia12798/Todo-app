@@ -2,14 +2,14 @@ import './Tarea.css';
 import { FaEdit } from "react-icons/fa";
 import { FaTrashAlt } from "react-icons/fa";
 
-function Tarea({ id, texto, eliminarTarea }) {
+function Tarea({ id, texto, eliminarTarea, editarTarea }) {
 
 return (
     <div className='tarea'>
     <p className='texto'>{texto}</p>
 
     <div className='btns'>
-        <button className='icon-btn' aria-label="Editar tarea">
+        <button className='icon-btn' aria-label="Editar tarea" onClick={() => editarTarea(id)}>
             <FaEdit />
         </button>
         <button className='icon-btn' aria-label="Eliminar tarea" onClick={() => eliminarTarea(id)}>
