@@ -1,4 +1,5 @@
 import './Tarea.css';
+
 import { FaEdit } from "react-icons/fa";
 import { FaTrashAlt } from "react-icons/fa";
 
