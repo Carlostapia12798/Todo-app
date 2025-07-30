@@ -21,6 +21,11 @@ function App() {
     setInputTexto(''); // limpia el input
   };
 
+   const eliminarTarea = (id) => {
+      const nuevasTareas = tareas.filter((t) => t.id !== id);
+      setTareas(nuevasTareas);
+    };
+
   return (
     <div className="todo-container">
       <div className="header">
@@ -41,7 +46,7 @@ function App() {
 
       <div className="todo-list">
         {tareas.map((t) => (
-          <Tarea key={t.id} texto={t.texto} />
+          <Tarea key={t.id} id={t.id} texto={t.texto} eliminarTarea={eliminarTarea} />
         ))}
       </div>
     </div>
