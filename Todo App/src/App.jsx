@@ -38,6 +38,13 @@ function App() {
     }
   };
 
+  const toggleCompletada = (id) => {
+  const tareasActualizadas = tareas.map((t) =>
+    t.id === id ? { ...t, completada: !t.completada } : t
+  );
+  setTareas(tareasActualizadas);
+};
+
   // Renderiza la aplicación
   return (
     <div className="todo-container">
@@ -59,7 +66,14 @@ function App() {
 
       <div className="todo-list">
         {tareas.map((t) => (
-          <Tarea key={t.id} id={t.id} texto={t.texto} eliminarTarea={eliminarTarea} editarTarea={editarTarea} />
+          <Tarea 
+          key={t.id} 
+          id={t.id} 
+          texto={t.texto} 
+          eliminarTarea={eliminarTarea} 
+          editarTarea={editarTarea} 
+          completada={t.completada}
+          toggleCompletada={toggleCompletada}/>
         ))}
       </div>
     </div>
