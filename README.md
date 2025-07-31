@@ -13,17 +13,10 @@ Una aplicación de lista de tareas desarrollada con **React**. Permite agregar, 
 
 ## 🛠️ Tecnologías utilizadas
 
-- React (con Vite o Create React App)
+- React (con Vite)
 - JavaScript (ES6+)
 - HTML/CSS
-- (Opcional: Tailwind CSS o estilos personalizados)
 
-
-## 🎨 Vista previa
-
-![Vista previa de la aplicación](./Todo%20App/src/assets/To%20Do%20App.PNG)
-
-![Vista previa de la aplicación](./Todo%20App/src/assets/To%20Do%20App%20editada.PNG)
 
 ## 📦 Instalación y ejecución local
 
